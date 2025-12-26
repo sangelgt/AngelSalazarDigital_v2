@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home - Angel Salazar Digital | ROI en IA</title>
+<meta content="Transforme su inversión en IA en rentabilidad medible. Metodología 'Orden antes que Herramienta'. Consultoría estratégica de Inteligencia Artificial." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3D0066", // Consistent Dark Purple Brand Color
+                        "primary-hover": "#2A0047",
+                        "secondary": "#10B981", // Semantic Green for specific success metrics
+                        "danger": "#EF4444",
+                        "warning": "#F59E0B",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#0F172A",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B",
+                        "text-light": "#111827",
+                        "text-dark": "#F3F4F6",
+                        "text-muted-light": "#6B7280",
+                        "text-muted-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'lg': "0.5rem",
+                        'xl': "0.75rem",
+                        '2xl': "1rem",
+                        '3xl': "1.5rem",
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
+                        'grid-pattern-dark': "linear-gradient(to right, #374151 1px, transparent 1px), linear-gradient(to bottom, #374151 1px, transparent 1px)",
+                    },
+                    animation: {
+                        'float-slow': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        ::selection {
+            background-color: #3D0066;
+            color: #ffffff;
+        }.animate-entrance {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+            will-change: opacity, transform;
+        }
+        .animate-entrance.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 antialiased selection:bg-primary selection:text-white">
+<nav class="fixed w-full z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center cursor-pointer group">
+<div class="h-10 w-10 bg-primary rounded-lg flex items-center justify-center mr-3 shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-200">
+<span class="text-white font-display font-bold text-xl">AS</span>
+</div>
+<span class="font-display font-bold text-xl tracking-tight hidden sm:block text-text-light dark:text-text-dark">Angel Salazar <span class="text-primary">Digital</span></span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-0.5" href="#">Inicio</a>
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors font-medium text-sm" href="#">Metodología</a>
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors font-medium text-sm" href="#">Casos de Éxito</a>
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors font-medium text-sm" href="#">Recursos</a>
+<button aria-label="Toggle Dark Mode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50" id="theme-toggle">
+<span class="material-symbols-outlined text-xl">brightness_4</span>
+</button>
+<a class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/30 hover:shadow-primary/50 transform hover:-translate-y-0.5" href="#contact">
+                    Diagnóstico
+                </a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="p-2 rounded-lg text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden">
+<div class="absolute inset-0 bg-grid-pattern dark:bg-grid-pattern-dark bg-[size:40px_40px] opacity-[0.4] pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-light/50 to-background-light dark:via-background-dark/50 dark:to-background-dark pointer-events-none"></div>
+<div class="absolute top-0 right-0 w-full md:w-2/3 h-full opacity-5 dark:opacity-10 pointer-events-none">
+<img alt="" class="object-cover w-full h-full [mask-image:linear-gradient(to_left,black,transparent)]" src="assets/images/hero-background.jpg"/>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+<div class="text-center lg:text-left">
+<h1 class="text-5xl md:text-7xl font-display font-bold mb-8 tracking-tight leading-[1.1] text-text-light dark:text-text-dark animate-entrance">
+                    Deje de comprar <br class="hidden md:block"/> herramientas. <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-primary animate-gradient-x">
+                        Construya sistemas de rentabilidad.
+                    </span>
+</h1>
+<h2 class="mb-10 max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-text-muted-light dark:text-text-muted-dark leading-relaxed font-normal animate-entrance delay-100">
+                    El 95% de los pilotos de Inteligencia Artificial fracasan en generar resultados financieros. En Angel Salazar Digital, orquestamos procesos de negocio bajo el método "Orden antes que Herramienta" para transformar su frustración en ROI tangible.
+                </h2>
+<div class="flex flex-col items-center lg:items-start animate-entrance delay-200">
+<button class="bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-10 rounded-lg shadow-xl shadow-primary/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center group ring-4 ring-transparent hover:ring-primary/20">
+                        Calcula tu Potencial de ROI
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">calculate</span>
+</button>
+<p class="mt-4 text-sm text-text-muted-light dark:text-text-muted-dark flex items-center">
+<span class="material-symbols-outlined text-base mr-1 text-primary">timer</span>
+                        Estimación personalizada en menos de 2 minutos.
+                    </p>
+</div>
+</div>
+<div class="relative hidden lg:flex items-center justify-center h-full min-h-[500px] animate-entrance delay-300">
+<div class="relative w-full max-w-md aspect-square">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-purple-600/30 rounded-full blur-[80px] opacity-60 animate-pulse-slow"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
+<div class="absolute top-10 left-0 right-0 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-xl border border-white/40 dark:border-gray-700 rounded-2xl shadow-2xl p-6 z-20 animate-float-slow ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex justify-between items-center mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">
+<div class="flex space-x-2">
+<div class="w-3 h-3 rounded-full bg-red-400"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+<div class="w-3 h-3 rounded-full bg-green-400"></div>
+</div>
+<div class="text-xs font-mono text-primary font-bold tracking-wider">SYSTEM_ROI_V2.0</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end h-32 gap-3 px-2">
+<div class="w-full bg-gray-100 dark:bg-gray-800 rounded-t-sm h-[30%]"></div>
+<div class="w-full bg-gray-100 dark:bg-gray-800 rounded-t-sm h-[45%]"></div>
+<div class="w-full bg-primary/30 rounded-t-sm h-[55%]"></div>
+<div class="w-full bg-primary/60 rounded-t-sm h-[75%]"></div>
+<div class="w-full bg-secondary rounded-t-sm h-[95%] relative group">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-surface-dark text-white text-xs font-bold py-1 px-3 rounded shadow-lg whitespace-nowrap">
+                                            +240% Growth
+                                        </div>
+</div>
+</div>
+<div class="flex justify-between text-xs text-text-muted-light dark:text-text-muted-dark font-mono mt-2">
+<span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>2025</span>
+</div>
+</div>
+</div>
+<div class="absolute -left-8 bottom-20 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-4 rounded-2xl shadow-xl z-30 animate-float-delayed w-48 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="p-2.5 bg-secondary/10 rounded-xl text-secondary">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+<div>
+<div class="text-xs text-text-muted-light dark:text-text-muted-dark uppercase font-bold tracking-wide">Eficiencia</div>
+<div class="text-sm font-bold text-text-light dark:text-text-dark">Optimizada</div>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 top-32 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-4 rounded-2xl shadow-xl z-10 animate-float-slow hover:border-primary/50 transition-colors" style="animation-delay: 1.5s;">
+<div class="flex items-center gap-3">
+<div class="p-2.5 bg-primary/10 rounded-xl text-primary">
+<span class="material-symbols-outlined text-xl">smart_toy</span>
+</div>
+<div>
+<div class="text-xs text-text-muted-light dark:text-text-muted-dark uppercase font-bold tracking-wide">IA Activa</div>
+<div class="text-sm font-bold text-text-light dark:text-text-dark">Integrada</div>
+</div>
+</div>
+</div>
+<svg class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-20 dark:opacity-40 text-primary" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<path d="M100,300 Q150,200 200,200 T350,150" fill="none" stroke="currentColor" stroke-dasharray="5,5" stroke-width="2"></path>
+<circle cx="350" cy="150" fill="currentColor" r="4"></circle>
+<circle cx="100" cy="300" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-light dark:bg-surface-dark border-y border-gray-200 dark:border-gray-800 relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-8 relative">
+<div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-700 to-transparent z-0"></div>
+<div class="relative z-10 bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg group hover:border-danger/40 transition-colors duration-300 h-full flex flex-col animate-entrance">
+<div class="w-14 h-14 bg-danger/10 rounded-full flex items-center justify-center mb-6 text-danger mx-auto md:mx-0 group-hover:scale-110 transition-transform duration-300 ring-4 ring-surface-light dark:ring-surface-dark">
+<span class="material-symbols-outlined text-3xl">error_outline</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-text-light dark:text-text-dark tracking-tight">El Problema</h3>
+<h4 class="text-lg font-bold text-danger mb-3">Implementación Inversa</h4>
+<p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed flex-grow">
+                    La mayoría de las empresas cometen el error capital: compran licencias de software esperando que la herramienta arregle mágicamente procesos rotos. Esto no es innovación, es automatización del caos.
+                </p>
+</div>
+<div class="relative z-10 bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg group hover:border-warning/40 transition-colors duration-300 h-full flex flex-col animate-entrance delay-100">
+<div class="w-14 h-14 bg-warning/10 rounded-full flex items-center justify-center mb-6 text-warning mx-auto md:mx-0 group-hover:scale-110 transition-transform duration-300 ring-4 ring-surface-light dark:ring-surface-dark">
+<span class="material-symbols-outlined text-3xl">psychology_alt</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-text-light dark:text-text-dark tracking-tight">La Agitación</h3>
+<h4 class="text-lg font-bold text-warning mb-3">La Hemorragia Silenciosa</h4>
+<p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed flex-grow">
+                    Mientras sus competidores anuncian "éxitos", usted acumula costos ocultos. Equipos frustrados, datos aislados y herramientas caras que nadie usa. La brecha entre expectativa y realidad se ensancha.
+                </p>
+</div>
+<div class="relative z-10 bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/30 shadow-xl shadow-primary/5 group h-full flex flex-col animate-entrance delay-200">
+<div class="absolute inset-0 bg-primary/5 rounded-2xl pointer-events-none"></div>
+<div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:scale-110 transition-transform duration-300 ring-4 ring-surface-light dark:ring-surface-dark shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-3xl">check_circle</span>
+</div>
+<h3 class="text-2xl font-display font-bold mb-4 text-text-light dark:text-text-dark tracking-tight">La Solución</h3>
+<h4 class="text-lg font-bold text-primary mb-3">Método ASD: Orden antes que Herramienta</h4>
+<p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed flex-grow relative z-10">
+                    Auditamos sus flujos de trabajo, eliminamos la fricción y estructuramos sus datos. Solo entonces, inyectamos la IA precisa. Transformamos la adopción tecnológica en una ciencia de rentabilidad predecible.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16 animate-entrance">
+<h2 class="text-3xl md:text-5xl font-display font-bold mb-4 tracking-tight text-text-light dark:text-text-dark">Resultados Tangibles</h2>
+<p class="text-text-muted-light dark:text-text-muted-dark max-w-2xl mx-auto text-lg">Métricas promedio de nuestros clientes tras 6 meses de implementación.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm text-center group hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 animate-entrance delay-100">
+<div class="text-4xl md:text-5xl font-bold text-secondary mb-3 group-hover:scale-110 transition-transform inline-block font-display">+240%</div>
+<div class="text-xs font-bold uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">ROI Promedio</div>
+</div>
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm text-center group hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 animate-entrance delay-200">
+<div class="text-4xl md:text-5xl font-bold text-primary mb-3 group-hover:scale-110 transition-transform inline-block font-display">-45%</div>
+<div class="text-xs font-bold uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">Costos Operativos</div>
+</div>
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm text-center group hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 animate-entrance delay-300">
+<div class="text-4xl md:text-5xl font-bold text-text-light dark:text-text-dark mb-3 group-hover:scale-110 transition-transform inline-block font-display">14</div>
+<div class="text-xs font-bold uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">Semanas Break-even</div>
+</div>
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm text-center group hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 animate-entrance delay-500">
+<div class="text-4xl md:text-5xl font-bold text-warning mb-3 group-hover:scale-110 transition-transform inline-block font-display">0</div>
+<div class="text-xs font-bold uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">Dependencia Técnica</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
+<div class="max-w-5xl mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/3 relative animate-entrance">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10 ring-1 ring-gray-900/10 dark:ring-white/10">
+<img alt="Angel Salazar" class="h-full w-full object-cover" src="assets/images/angel-salazar.jpg"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-24 h-24 bg-grid-pattern dark:bg-grid-pattern-dark opacity-50 rounded-full z-0"></div>
+<div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full z-0"></div>
+</div>
+<div class="w-full md:w-2/3 animate-entrance delay-200">
+<h2 class="text-3xl font-display font-bold mb-6 text-text-light dark:text-text-dark">Autoridad y Confianza</h2>
+<p class="text-lg text-text-muted-light dark:text-text-muted-dark mb-8 leading-relaxed">
+                    "La Inteligencia Artificial no es una varita mágica, es un amplificador. Si amplificas procesos ineficientes, solo escalas el desastre. Mi misión es simple: limpiar la casa antes de invitar a los robots. Los resultados no mienten."
+                </p>
+<div class="border-l-4 border-primary pl-6 py-4 bg-background-light dark:bg-gray-800/50 rounded-r-2xl">
+<div class="flex items-start">
+<span class="material-symbols-outlined text-primary text-4xl mr-4 mt-1">format_quote</span>
+<div>
+<p class="italic text-text-light dark:text-text-dark font-medium mb-4 text-lg">
+                                "Contratamos a tres agencias antes de Angel Salazar. Todas querían vendernos chatbots. Angel nos vendió una reingeniería de procesos que nos ahorró $200k antes de instalar la primera línea de código."
+                            </p>
+<div class="font-bold text-base text-primary">Carlos Mendez</div>
+<div class="text-xs font-bold uppercase tracking-wide text-text-muted-light dark:text-text-muted-dark">CEO, Logistics Ve</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark text-center relative overflow-hidden" id="contact">
+<div class="absolute inset-0 bg-primary/5 dark:bg-primary/5 z-0"></div>
+<div class="max-w-3xl mx-auto px-4 relative z-10 animate-entrance">
+<h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-text-light dark:text-text-dark tracking-tight">
+            ¿Listo para dejar de adivinar?
+        </h2>
+<p class="text-xl text-text-muted-light dark:text-text-muted-dark mb-10 leading-relaxed">
+            Audite su madurez digital y descubra cuánto dinero está dejando sobre la mesa con nuestra metodología probada.
+        </p>
+<button class="bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-10 rounded-lg shadow-xl shadow-primary/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center mx-auto group ring-4 ring-transparent hover:ring-primary/20">
+            Calcula tu Potencial de ROI
+            <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="mt-6 text-sm font-medium text-text-muted-light dark:text-text-muted-dark">
+<span class="inline-block w-2 h-2 bg-secondary rounded-full mr-2"></span>
+            Agenda limitada a 3 consultorías por mes.
+        </p>
+</div>
+</section>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div class="lg:col-span-1">
+<div class="flex items-center mb-6">
+<div class="h-8 w-8 bg-primary rounded-lg flex items-center justify-center mr-2 shadow-lg shadow-primary/20">
+<span class="text-white font-display font-bold text-sm">AS</span>
+</div>
+<span class="font-display font-bold text-xl text-text-light dark:text-text-dark tracking-tight">Angel Salazar <span class="text-primary">Digital</span></span>
+</div>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed">
+                    Transformando negocios mediante inteligencia artificial aplicada.<br/>
+<span class="font-semibold text-primary">Order before Tool.</span>
+</p>
+<div class="flex space-x-4">
+<a class="text-text-muted-light hover:text-primary transition-colors duration-200" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="text-text-muted-light hover:text-primary transition-colors duration-200" href="#">
+<span class="sr-only">Twitter</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-display font-bold text-lg mb-4 text-text-light dark:text-text-dark">Navegación</h3>
+<ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark font-medium">
+<li><a class="hover:text-primary transition-colors block" href="#">Inicio</a></li>
+<li><a class="hover:text-primary transition-colors block" href="#">Metodología</a></li>
+<li><a class="hover:text-primary transition-colors block" href="#">Casos de Éxito</a></li>
+<li><a class="hover:text-primary transition-colors block" href="#">Recursos</a></li>
+<li><a class="hover:text-primary transition-colors block" href="#">Diagnóstico</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-display font-bold text-lg mb-4 text-text-light dark:text-text-dark">Contacto</h3>
+<ul class="space-y-4 text-sm text-text-muted-light dark:text-text-muted-dark">
+<li class="flex items-center group cursor-pointer">
+<div class="bg-primary/10 p-2 rounded-lg text-primary mr-3 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">phone</span>
+</div>
+<span class="group-hover:text-text-light dark:group-hover:text-text-dark transition-colors">+34 912 345 678</span>
+</li>
+<li class="flex items-center group cursor-pointer">
+<div class="bg-primary/10 p-2 rounded-lg text-primary mr-3 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">email</span>
+</div>
+<span class="group-hover:text-text-light dark:group-hover:text-text-dark transition-colors">contacto@angelsalazardigital.com</span>
+</li>
+<li class="flex items-center group">
+<div class="bg-primary/10 p-2 rounded-lg text-primary mr-3">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</div>
+<span>Lun - Vie: 9:00 - 18:00 CET</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-display font-bold text-lg mb-4 text-text-light dark:text-text-dark">Legal</h3>
+<ul class="space-y-3 text-sm text-text-muted-light dark:text-text-muted-dark font-medium">
+<li><a class="hover:text-primary transition-colors block" href="#">Declaración de Accesibilidad</a></li>
+<li><a class="hover:text-primary transition-colors block" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-primary transition-colors block" href="#">Términos y Condiciones</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-text-muted-light dark:text-text-muted-dark">
+<div class="mb-4 md:mb-0">
+                © 2024 Angel Salazar Digital. Todos los derechos reservados.
+            </div>
+<div class="flex items-center space-x-4">
+<span class="flex items-center text-xs opacity-75">
+<span class="material-symbols-outlined text-sm mr-1">location_on</span>
+                     Madrid, España
+                </span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Dark mode toggle logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeToggleBtn.querySelector('span');
+    // Check local storage or system preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        themeIcon.textContent = 'light_mode';
+    } else {
+        document.documentElement.classList.remove('dark');
+        themeIcon.textContent = 'dark_mode';
+    }
+    themeToggleBtn.addEventListener('click', function() {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+            themeIcon.textContent = 'dark_mode';
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+            themeIcon.textContent = 'light_mode';
+        }
+    });
+    // Scroll Animation Observer Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of element is visible
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Animate only once
+                }
+            });
+        }, observerOptions);
+        const elements = document.querySelectorAll('.animate-entrance');
+        elements.forEach(el => observer.observe(el));
+    });
+</script>
+</body></html>

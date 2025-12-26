@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recursos - Gestión del Conocimiento | Angel Salazar Digital</title>
+<meta content="Recursos estratégicos, guías de gobernanza y herramientas de ROI para la implementación de IA. Documentación accesible WCAG 2.2 AA." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3D0066", // Deep Dark Purple
+                        "primary-hover": "#24003D", // Even darker for hover states
+                        "primary-light": "#8B5CF6", // Violet-500 for dark mode text
+                        "secondary": "#10B981", // Emerald Green for success
+                        "danger": "#EF4444", // Red for obstacles
+                        "warning": "#F59E0B", // Amber for insights
+                        "background-light": "#F9FAFB", // Gray 50
+                        "background-dark": "#0F172A", // Slate 900
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B", // Slate 800
+                        "text-light": "#111827", // Gray 900
+                        "text-dark": "#F3F4F6", // Gray 100
+                        "text-muted-light": "#6B7280", // Gray 500
+                        "text-muted-dark": "#9CA3AF", // Gray 400
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
+                        'grid-pattern-dark': "linear-gradient(to right, #374151 1px, transparent 1px), linear-gradient(to bottom, #374151 1px, transparent 1px)",
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        *:focus-visible {
+            outline: 2px solid #3D0066;
+            outline-offset: 2px;
+        }
+        .dark *:focus-visible {
+            outline-color: #8B5CF6;
+        }.reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 antialiased selection:bg-primary selection:text-white">
+<nav class="fixed w-full z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur border-b border-gray-200 dark:border-gray-700">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<a class="flex items-center group" href="#">
+<div class="h-10 w-10 bg-primary rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary-hover transition-colors">
+<span class="text-white font-display font-bold text-xl">AS</span>
+</div>
+<span class="font-display font-bold text-xl tracking-tight hidden sm:block">Angel Salazar <span class="text-primary dark:text-primary-light">Digital</span></span>
+</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary-light transition-colors font-medium" href="#">Inicio</a>
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary-light transition-colors font-medium" href="#">Metodología</a>
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary-light transition-colors font-medium" href="#">Casos de Éxito</a>
+<a class="text-primary dark:text-primary-light font-semibold border-b-2 border-primary dark:border-primary-light" href="#">Recursos</a>
+<a class="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary-light transition-colors font-medium" href="#">Diagnóstico</a>
+<button aria-label="Cambiar tema" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" id="theme-toggle">
+<span class="material-icons-outlined text-xl">brightness_4</span>
+</button>
+<a class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-lg font-bold transition-all shadow-lg shadow-primary/30 focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#contact">
+                    Consultoría
+                </a>
+</div>
+<div class="md:hidden flex items-center space-x-4">
+<button aria-label="Cambiar tema" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" id="theme-toggle-mobile">
+<span class="material-icons-outlined text-xl">brightness_4</span>
+</button>
+<button class="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-icons-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative pt-32 pb-20 overflow-hidden">
+<div class="absolute inset-0 bg-grid-pattern dark:bg-grid-pattern-dark bg-[size:40px_40px] opacity-[0.4] pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-light/50 to-background-light dark:via-background-dark/50 dark:to-background-dark pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="reveal-up inline-flex items-center px-3 py-1 rounded-full bg-primary/10 dark:bg-primary-light/20 text-primary dark:text-primary-light text-sm font-semibold mb-6 border border-primary/20 dark:border-primary-light/20">
+<span class="w-2 h-2 rounded-full bg-primary dark:bg-primary-light mr-2 animate-pulse"></span>
+            Gestión del Conocimiento
+        </div>
+<h1 class="reveal-up delay-100 text-5xl md:text-7xl font-display font-bold mb-6 tracking-tight leading-tight">
+            Recursos &amp; <br class="hidden md:block"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-light to-primary dark:from-primary-light dark:via-purple-300 dark:to-primary-light">
+                Capital Intelectual
+            </span>
+</h1>
+<p class="reveal-up delay-200 mt-4 max-w-2xl mx-auto text-xl text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+            Herramientas diseñadas bajo la metodología "Order before Tool". Transforme su inversión en IA en activos tangibles y evite la deuda técnica.
+        </p>
+</div>
+</section>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-24">
+<div class="text-center mb-16 max-w-3xl mx-auto reveal-up">
+<span class="text-primary dark:text-primary-light font-bold tracking-widest text-sm uppercase mb-2 block">Repositorio</span>
+<h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-text-light dark:text-text-dark">
+            Activos Estratégicos para una Organización Resiliente
+        </h2>
+<p class="text-lg text-text-muted-light dark:text-text-muted-dark mb-8">
+            Proveemos herramientas, guías técnicas y artículos de profundidad para prevenir la degradación del conocimiento corporativo ante la velocidad de la IA.
+        </p>
+<div class="inline-flex items-center bg-secondary/10 dark:bg-secondary/20 px-4 py-2 rounded-full border border-secondary/20">
+<span class="material-symbols-outlined text-secondary mr-2 text-xl">accessibility_new</span>
+<span class="text-sm font-medium text-secondary/90 dark:text-secondary">
+                Documentos optimizados para accesibilidad nativa WCAG 2.2 AA
+            </span>
+</div>
+</div>
+<div class="reveal-up delay-100 bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-16 relative group">
+<div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-primary">rocket_launch</span>
+</div>
+<div class="md:flex items-center">
+<div class="md:w-1/3 bg-primary/5 dark:bg-primary-light/10 p-8 flex items-center justify-center border-r border-gray-100 dark:border-gray-700">
+<div class="text-center">
+<span class="material-symbols-outlined text-6xl text-primary dark:text-primary-light mb-4">analytics</span>
+<div class="text-sm font-bold text-primary dark:text-primary-light uppercase tracking-wider">Recurso Destacado</div>
+</div>
+</div>
+<div class="md:w-2/3 p-8 md:p-12">
+<div class="flex items-start justify-between mb-4">
+<h3 class="text-2xl font-bold font-display text-text-light dark:text-text-dark">Guía de Rentabilidad en IA</h3>
+<span class="bg-primary/5 dark:bg-primary-light/10 text-primary dark:text-primary-light border border-primary/20 dark:border-primary-light/20 text-xs px-2 py-1 rounded font-mono">PDF Accesible</span>
+</div>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-8 leading-relaxed">
+                    La guía definitiva para directores financieros y líderes de tecnología. Aprenda a calcular el ROI real de sus implementaciones, separando el hype de la eficiencia operativa real. Incluye fórmulas y KPIs estándar de la industria.
+                </p>
+<button class="w-full md:w-auto bg-primary hover:bg-primary-hover text-white text-lg font-bold py-3 px-8 rounded-lg shadow-lg shadow-primary/30 transform transition-all duration-300 flex items-center justify-center group-hover:translate-x-1 focus:ring-4 focus:ring-primary/40">
+<span class="material-symbols-outlined mr-2">download</span>
+                    Descargar Guía de Rentabilidad en IA
+                </button>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="reveal-up delay-200 bg-surface-light dark:bg-surface-dark p-8 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary/50 dark:hover:border-primary-light/50 transition-colors shadow-sm hover:shadow-md group">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg group-hover:bg-primary/10 dark:group-hover:bg-primary-light/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-gray-300 group-hover:text-primary dark:group-hover:text-primary-light">fact_check</span>
+</div>
+<span class="bg-primary/5 dark:bg-primary-light/10 text-primary dark:text-primary-light border border-primary/20 dark:border-primary-light/20 text-xs font-mono px-2 py-1 rounded">PDF Accesible</span>
+</div>
+<h3 class="text-xl font-display font-bold mb-3 text-text-light dark:text-text-dark group-hover:text-primary dark:group-hover:text-primary-light transition-colors">Checklist de Gobernanza</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-6 text-sm leading-relaxed">
+                Lista de verificación crítica para asegurar que sus datos y procesos cumplen con los estándares éticos y legales antes de escalar cualquier modelo.
+            </p>
+<a class="inline-flex items-center text-primary dark:text-primary-light font-semibold hover:text-primary-hover dark:hover:text-primary-light/80 transition-colors" href="#">
+                Descargar documento
+                <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="reveal-up delay-300 bg-surface-light dark:bg-surface-dark p-8 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary/50 dark:hover:border-primary-light/50 transition-colors shadow-sm hover:shadow-md group">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg group-hover:bg-primary/10 dark:group-hover:bg-primary-light/10 transition-colors">
+<span class="material-symbols-outlined text-3xl text-gray-600 dark:text-gray-300 group-hover:text-primary dark:group-hover:text-primary-light">folder_supervised</span>
+</div>
+<span class="bg-primary/5 dark:bg-primary-light/10 text-primary dark:text-primary-light border border-primary/20 dark:border-primary-light/20 text-xs font-mono px-2 py-1 rounded">PDF Accesible</span>
+</div>
+<h3 class="text-xl font-display font-bold mb-3 text-text-light dark:text-text-dark group-hover:text-primary dark:group-hover:text-primary-light transition-colors">Plantillas de AI Owner</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-6 text-sm leading-relaxed">
+                Set de documentos para definir roles, responsabilidades y estructuras de reporte para los dueños de producto en proyectos de Inteligencia Artificial.
+            </p>
+<a class="inline-flex items-center text-primary dark:text-primary-light font-semibold hover:text-primary-hover dark:hover:text-primary-light/80 transition-colors" href="#">
+                Descargar documento
+                <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+<section class="bg-background-dark text-text-dark py-20 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-20 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary opacity-10 blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+<h2 class="reveal-up text-3xl font-display font-bold mb-4">¿Necesita una auditoría personalizada?</h2>
+<p class="reveal-up delay-100 text-text-muted-dark max-w-2xl mx-auto mb-8">
+            Más allá de las herramientas, ofrecemos consultoría estratégica para asegurar que su organización esté lista para el cambio.
+        </p>
+<a class="reveal-up delay-200 inline-block border border-gray-600 hover:border-primary hover:bg-primary text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-primary/25" href="#contact">
+            Contactar Consultoría
+        </a>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark text-center" id="contact">
+<div class="max-w-3xl mx-auto px-4">
+<h2 class="reveal-up text-3xl md:text-5xl font-display font-bold mb-6 text-text-light dark:text-text-dark">
+            ¿Tu empresa está lista para escalar?
+        </h2>
+<p class="reveal-up delay-100 text-xl text-text-muted-light dark:text-text-muted-dark mb-10">
+            Deja de adivinar. Hagamos una auditoría de viabilidad y encontremos dónde está tu ROI oculto.
+        </p>
+<button class="reveal-up delay-200 bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-10 rounded-lg shadow-xl shadow-primary/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center mx-auto group">
+            Descubre el ROI Potencial para Tu Empresa
+            <span class="material-icons-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="reveal-up delay-300 mt-6 text-sm text-text-muted-light dark:text-text-muted-dark">
+            Agenda limitada a 3 consultorías por mes.
+        </p>
+</div>
+</section>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 lg:col-span-2 reveal-up">
+<span class="font-display font-bold text-2xl text-text-light dark:text-text-dark flex items-center gap-2 mb-4">
+                    Angel Salazar <span class="text-primary dark:text-primary-light">Digital</span>
+</span>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-6 max-w-sm">
+                    Order before Tool. Data before Magic. Transformamos la adopción de IA en una ventaja competitiva medible y sostenible.
+                </p>
+<div class="flex space-x-4">
+<a aria-label="LinkedIn" class="text-text-muted-light hover:text-white hover:bg-primary transition-all duration-300 bg-gray-100 dark:bg-gray-800 p-2 rounded-full" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a aria-label="Twitter" class="text-text-muted-light hover:text-white hover:bg-primary transition-all duration-300 bg-gray-100 dark:bg-gray-800 p-2 rounded-full" href="#">
+<span class="material-symbols-outlined text-xl">rss_feed</span>
+</a>
+</div>
+</div>
+<div class="reveal-up delay-100">
+<h4 class="font-bold text-lg mb-6 text-text-light dark:text-text-dark font-display">Contacto</h4>
+<ul class="space-y-4">
+<li class="flex items-start text-text-muted-light dark:text-text-muted-dark">
+<span class="material-icons-outlined text-primary dark:text-primary-light mr-3 text-lg mt-1">phone</span>
+<span>+34 900 000 000</span>
+</li>
+<li class="flex items-start text-text-muted-light dark:text-text-muted-dark">
+<span class="material-icons-outlined text-primary dark:text-primary-light mr-3 text-lg mt-1">email</span>
+<a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="mailto:hola@angelsalazardigital.com">hola@angelsalazardigital.com</a>
+</li>
+<li class="flex items-start text-text-muted-light dark:text-text-muted-dark">
+<span class="material-icons-outlined text-primary dark:text-primary-light mr-3 text-lg mt-1">schedule</span>
+<span>Lun - Vie: 9:00 - 18:00</span>
+</li>
+</ul>
+</div>
+<div class="reveal-up delay-200">
+<h4 class="font-bold text-lg mb-6 text-text-light dark:text-text-dark font-display">Navegación</h4>
+<ul class="space-y-3 text-text-muted-light dark:text-text-muted-dark">
+<li><a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Inicio</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Metodología</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Casos de Éxito</a></li>
+<li><a class="text-primary dark:text-primary-light font-medium" href="#">Recursos</a></li>
+<li><a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Diagnóstico</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-text-muted-light dark:text-text-muted-dark reveal-up delay-300">
+<div class="mb-4 md:mb-0">
+                © 2024 Angel Salazar Digital. Todos los derechos reservados.
+            </div>
+<div class="flex flex-wrap gap-6 justify-center">
+<a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Declaración de Accesibilidad</a>
+<a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Términos y Condiciones</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Dark mode toggle logic
+    const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+    // Helper to set icons
+    function updateIcons(isDark) {
+        themeToggleBtns.forEach(btn => {
+            if(!btn) return;
+            const icon = btn.querySelector('span');
+            icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+        });
+    }
+    // Check local storage or system preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        updateIcons(true);
+    } else {
+        document.documentElement.classList.remove('dark');
+        updateIcons(false);
+    }
+    // Add event listeners to all buttons
+    themeToggleBtns.forEach(btn => {
+        if(!btn) return;
+        btn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                updateIcons(false);
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                updateIcons(true);
+            }
+        });
+    });
+    // Scroll Animation Observer
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal-up').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+<script src="/js/main.js"></script>
+</body></html>

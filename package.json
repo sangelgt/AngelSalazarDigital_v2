@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start": "http-server -p 8080",
+    "verify:index": "node verification/verify-index.js",
+    "verify:methodology": "node verification/verify-methodology.js",
+    "verify:case-studies": "node verification/verify-case-studies.js",
+    "verify:resources": "node verification/verify-resources.js",
+    "verify:diagnosis": "node verification/verify-diagnosis.js",
+    "verify:terms": "node verification/verify-terms.js",
+    "verify:privacy": "node verification/verify-privacy.js",
+    "verify": "npm run verify:index && npm run verify:methodology && npm run verify:case-studies && npm run verify:resources && npm run verify:diagnosis && npm run verify:terms && npm run verify:privacy"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "playwright": "^1.45.1"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}
