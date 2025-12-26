@@ -1,0 +1,8 @@
+Broken Links Audit
+====================
+
+This document lists all local CSS and JavaScript files that are referenced in the HTML
+files but do not exist in the repository.
+
+- /css/main.css
+- /js/main.js
